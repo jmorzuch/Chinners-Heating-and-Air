@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinners Heating and Air | Quality HVAC Service in Summerville, SC</title>
+  <meta name="description" content="Professional, timely, and affordable HVAC services in Summerville, SC. Geothermal expertise. EPA Universal certified. Call (843) 934-3731.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #16233c;
+      --ink-soft: #46566e;
+      --muted: #7d8a9e;
+      --line: #e6ebf2;
+      --line-soft: #eef2f8;
+      --paper: #ffffff;
+      --paper-2: #f7f9fc;
+      --paper-3: #eef2f8;
+      --navy: #0e1a2f;
+      --navy-2: #16273f;
+      --amber: #ea7a2e;
+      --amber-2: #f4a94e;
+      --amber-ink: #b95f18;
+      --amber-soft: #fbe7d3;
+      --emerald: #35d39a;
+      --shadow-sm: 0 1px 2px rgba(16,25,40,.05), 0 2px 8px rgba(16,25,40,.05);
+      --shadow: 0 2px 4px rgba(16,25,40,.05), 0 14px 34px -14px rgba(16,25,40,.22);
+      --shadow-lg: 0 6px 14px rgba(16,25,40,.06), 0 40px 70px -28px rgba(16,25,40,.32);
+      --r-sm: 12px;
+      --r-md: 18px;
+      --r-lg: 26px;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4 { letter-spacing: -0.02em; }
+    section { scroll-margin-top: 84px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .78rem; font-weight: 700; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--amber-ink);
+    }
+    .eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--amber); border-radius: 2px; }
+    .section { padding: clamp(4.5rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem); position: relative; }
+    .section-head { max-width: 640px; margin-bottom: clamp(2.5rem, 5vw, 3.75rem); }
+    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .section-head.center .eyebrow { justify-content: center; }
+    .section-head.center .eyebrow::before { display: none; }
+    .section-head h2 {
+      font-family: var(--font-serif); font-weight: 600;
+      font-size: clamp(1.9rem, 4.2vw, 2.8rem); line-height: 1.12;
+      color: var(--ink); margin: .9rem 0 1rem;
+      text-wrap: balance;
+    }
+    .section-head p { color: var(--ink-soft); font-size: 1.06rem; line-height: 1.7; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      padding: .85rem 1.55rem; border-radius: 12px; font-family: inherit;
+      font-size: .98rem; font-weight: 600; text-decoration: none; cursor: pointer;
+      border: 1px solid transparent; transition: transform .18s ease, box-shadow .25s ease, background .2s ease, border-color .2s ease;
+      min-height: 46px;
+    }
+    .btn svg { flex-shrink: 0; }
+    .btn-primary { background: var(--amber); color: #fff; box-shadow: 0 8px 20px -8px rgba(234,122,46,.65); }
+    .btn-primary:hover { background: var(--amber-2); transform: translateY(-2px); box-shadow: 0 14px 30px -10px rgba(234,122,46,.7); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+    .btn-ghost:hover { background: var(--paper-2); border-color: var(--ink); }
+    .btn-ghost-dark { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.24); }
+    .btn-ghost-dark:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.5); transform: translateY(-2px); }
+    .btn:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 3px solid rgba(234,122,46,.5); outline-offset: 2px;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(14,26,47,.72); backdrop-filter: blur(14px) saturate(1.4);
+      -webkit-backdrop-filter: blur(14px) saturate(1.4);
+      transition: background .3s ease, box-shadow .3s ease, padding .3s ease;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; height: 70px; padding: 0 clamp(1.25rem, 5vw, 3rem);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav.scrolled { background: rgba(14,26,47,.95); box-shadow: 0 8px 30px -12px rgba(0,0,0,.5); }
+    .nav-logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: #fff; font-weight: 700; font-size: 1.02rem; letter-spacing: -.01em; }
+    .nav-logo svg, .nav-logo img { flex-shrink: 0; }
+    .nav-logo img { width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 4px 14px -4px rgba(0,0,0,.5); }
+    .nav-links { display: flex; gap: .4rem; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,.78); text-decoration: none; font-size: .92rem; font-weight: 500; padding: .5rem .8rem; border-radius: 9px; transition: color .2s, background .2s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.07); }
+    .nav-cta { background: var(--amber) !important; color: #fff !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--amber-2) !important; }
+    .nav-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: .4rem; }
+    .nav-toggle svg { display: block; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: clamp(8.5rem, 15vh, 11rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 8vh, 6rem);
+      background:
+        radial-gradient(1100px 520px at 82% -8%, rgba(234,122,46,.20), transparent 60%),
+        radial-gradient(760px 460px at 6% 118%, rgba(234,122,46,.10), transparent 60%),
+        linear-gradient(180deg, #0d182c 0%, #10203a 55%, #142842 100%);
+      color: #fff;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 62px 62px;
+      mask-image: radial-gradient(80% 80% at 50% 30%, #000 0%, transparent 100%);
+      -webkit-mask-image: radial-gradient(80% 80% at 50% 30%, #000 0%, transparent 100%);
+    }
+    .hero-inner { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      padding: .5rem 1rem; border-radius: 100px; font-size: .85rem; color: rgba(255,255,255,.85); font-weight: 500;
+    }
+    .hero-badge .dot { width: 8px; height: 8px; background: var(--emerald); border-radius: 50%; box-shadow: 0 0 0 0 rgba(53,211,154,.6); animation: ping 2.4s ease-out infinite; }
+    @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(53,211,154,.55); } 70% { box-shadow: 0 0 0 8px rgba(53,211,154,0); } 100% { box-shadow: 0 0 0 0 rgba(53,211,154,0); } }
+    .hero h1 {
+      font-family: var(--font-serif); font-weight: 600;
+      font-size: clamp(2.6rem, 6.5vw, 4.4rem); line-height: 1.05;
+      margin: 1.5rem auto 1.3rem; text-wrap: balance; max-width: 15ch;
+    }
+    .hero h1 em { font-style: italic; color: var(--amber-2); }
+    .hero p { font-size: 1.16rem; color: rgba(255,255,255,.74); max-width: 34rem; margin: 0 auto; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 1rem; margin-top: 2.3rem; flex-wrap: wrap; justify-content: center; }
+
+    /* ── Trust ribbon ── */
+    .trust {
+      background: #fff; border-bottom: 1px solid var(--line);
+      padding: 1.3rem clamp(1.25rem, 5vw, 3rem);
+    }
+    .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 3rem; }
+    .trust-item { display: inline-flex; align-items: center; gap: .65rem; color: var(--ink-soft); font-size: .94rem; font-weight: 600; }
+    .trust-item svg { color: var(--amber); flex-shrink: 0; }
+    .trust-item b { color: var(--ink); font-weight: 800; }
+
+    /* ── About ── */
+    .about { background: var(--paper-2); }
+    .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 4rem); max-width: 1160px; margin: 0 auto; align-items: start; }
+    .about-copy h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--ink); margin-bottom: 1rem; }
+    .about-copy p { color: var(--ink-soft); margin-bottom: 1.15rem; line-height: 1.75; }
+    .about-features { list-style: none; margin-top: 1.6rem; display: grid; gap: .85rem; }
+    .about-features li { display: flex; align-items: flex-start; gap: .8rem; color: var(--ink); font-size: .98rem; font-weight: 500; }
+    .about-features .check { flex-shrink: 0; width: 24px; height: 24px; background: var(--amber-soft); border-radius: 7px; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .about-features .check svg { width: 15px; height: 15px; color: var(--amber-ink); }
+    .about-media { position: relative; }
+    .about-media img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: var(--r-lg); box-shadow: var(--shadow-lg); border: 1px solid var(--line); }
+    .about-media figcaption { margin-top: .8rem; font-size: .86rem; color: var(--muted); }
+    .about-media .badge-2021 {
+      position: absolute; left: -14px; bottom: 28px; background: var(--navy); color: #fff;
+      border-radius: 14px; padding: .8rem 1.05rem; box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,.12);
+    }
+    .about-media .badge-2021 b { display: block; font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--amber-2); line-height: 1; }
+    .about-media .badge-2021 span { font-size: .72rem; color: rgba(255,255,255,.7); }
+    .about-card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--r-md);
+      padding: 1.8rem; box-shadow: var(--shadow-sm); margin-top: 2rem; display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .about-card .mark { flex-shrink: 0; width: 46px; height: 46px; border-radius: 12px; background: var(--amber-soft); display: flex; align-items: center; justify-content: center; }
+    .about-card .mark svg { width: 24px; height: 24px; color: var(--amber-ink); }
+    .about-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: .35rem; }
+    .about-card p { color: var(--ink-soft); font-size: .94rem; line-height: 1.6; }
+    .team-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem; max-width: 1160px; margin-left: auto; margin-right: auto; }
+    .team-card { background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); padding: 1.2rem 1.4rem; box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 1rem; transition: transform .25s ease, box-shadow .25s ease; }
+    .team-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .team-avatar { width: 50px; height: 50px; border-radius: 13px; background: var(--navy); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1rem; flex-shrink: 0; letter-spacing: .02em; }
+    .team-card .name { font-weight: 700; color: var(--ink); font-size: 1rem; }
+    .team-card .role { font-size: .85rem; color: var(--muted); }
+
+    /* ── Services (bento) ── */
+    .services-grid { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: minmax(160px, auto); gap: 1.1rem; max-width: 1160px; margin: 0 auto; }
+    .service-card { background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); padding: 1.8rem; position: relative; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; overflow: hidden; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+    .service-card .ico { width: 48px; height: 48px; border-radius: 12px; background: var(--amber-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 1.15rem; transition: transform .25s ease; }
+    .service-card:hover .ico { transform: scale(1.06) rotate(-3deg); }
+    .service-card .ico svg { width: 26px; height: 26px; color: var(--amber-ink); }
+    .service-card h3 { font-size: 1.12rem; font-weight: 700; color: var(--ink); margin-bottom: .5rem; }
+    .service-card p { color: var(--ink-soft); font-size: .94rem; line-height: 1.6; }
+    .service-card .tag { position: absolute; top: 1.35rem; right: 1.35rem; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--amber-ink); background: var(--amber-soft); padding: .3rem .6rem; border-radius: 100px; }
+    .service-card.feature { grid-column: span 3; grid-row: span 2; background: linear-gradient(155deg, #0e1a2f 0%, #172944 100%); border-color: rgba(255,255,255,.08); display: flex; flex-direction: column; justify-content: flex-end; }
+    .service-card.feature::before { content: ''; position: absolute; top: -40%; right: -10%; width: 320px; height: 320px; background: radial-gradient(circle, rgba(234,122,46,.35), transparent 70%); }
+    .service-card.feature h3 { color: #fff; font-size: 1.55rem; font-family: var(--font-serif); font-weight: 600; }
+    .service-card.feature p { color: rgba(255,255,255,.72); font-size: 1rem; }
+    .service-card.feature .ico { background: rgba(234,122,46,.16); }
+    .service-card.feature .ico svg { color: var(--amber-2); }
+    .service-card.feature .tag { background: rgba(234,122,46,.2); color: var(--amber-2); }
+    .service-card.std { grid-column: span 3; }
+
+    /* ── Why Us ── */
+    .why { background: var(--paper-2); }
+    .why-list { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 4rem; }
+    .why-item { display: flex; gap: 1.1rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+    .why-item .n { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--amber); flex-shrink: 0; min-width: 2.2rem; }
+    .why-item h3 { font-size: 1.12rem; font-weight: 700; color: var(--ink); margin-bottom: .35rem; }
+    .why-item p { color: var(--ink-soft); font-size: .96rem; line-height: 1.6; }
+
+    /* ── Gallery ── */
+    .gallery { background: #fff; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 210px; gap: 14px; max-width: 1160px; margin: 0 auto; }
+    .gallery-item { position: relative; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.jeff { grid-row: span 2; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .gallery-item.jeff img { object-position: center top; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 2rem 1.1rem .85rem; background: linear-gradient(transparent, rgba(10,16,28,.86)); color: #fff; font-size: .84rem; font-weight: 600; opacity: 0; transform: translateY(8px); transition: opacity .3s ease, transform .3s ease; }
+    .gallery-item:hover .cap, .gallery-item:focus-within .cap { opacity: 1; transform: translateY(0); }
+
+    /* ── Testimonials ── */
+    .testimonials { background: linear-gradient(180deg, #0d182c 0%, #12223c 100%); color: #fff; }
+    .testimonials .eyebrow { color: var(--amber-2); }
+    .testimonials .section-head h2 { color: #fff; }
+    .testimonials .section-head p { color: rgba(255,255,255,.62); }
+    .rating-strip { display: inline-flex; align-items: center; gap: .7rem; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); padding: .6rem 1.1rem; border-radius: 100px; margin-bottom: 1rem; }
+    .rating-strip .stars { color: var(--amber-2); letter-spacing: 2px; font-size: .95rem; }
+    .rating-strip span { color: rgba(255,255,255,.8); font-size: .88rem; font-weight: 600; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.3rem; max-width: 1040px; margin: 0 auto; }
+    .testimonial-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.11); border-radius: var(--r-md); padding: 1.8rem; position: relative; transition: transform .25s ease, background .25s ease, border-color .25s ease; }
+    .testimonial-card:hover { transform: translateY(-4px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.2); }
+    .t-stars { color: var(--amber-2); font-size: .85rem; letter-spacing: 3px; margin-bottom: .9rem; }
+    .testimonial-text { color: rgba(255,255,255,.82); font-size: .95rem; line-height: 1.72; margin-bottom: 1.3rem; }
+    .testimonial-author { display: flex; align-items: center; gap: .7rem; }
+    .testimonial-avatar { width: 38px; height: 38px; background: rgba(234,122,46,.22); border: 1px solid rgba(234,122,46,.35); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--amber-2); font-weight: 700; font-size: .82rem; }
+    .testimonial-name { color: #fff; font-weight: 600; font-size: .92rem; }
+    .testimonial-date { color: rgba(255,255,255,.45); font-size: .78rem; }
+
+    /* ── CTA ── */
+    .cta-banner { position: relative; overflow: hidden; background: linear-gradient(120deg, #ea7a2e 0%, #f0944a 100%); padding: clamp(3.5rem, 7vw, 5.5rem) clamp(1.25rem, 5vw, 3rem); text-align: center; color: #fff; }
+    .cta-banner::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px); background-size: 100% 44px; pointer-events: none; }
+    .cta-banner > * { position: relative; z-index: 2; }
+    .cta-banner h2 { font-family: var(--font-serif); font-weight: 600; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem; text-wrap: balance; }
+    .cta-banner p { color: rgba(255,255,255,.9); font-size: 1.08rem; margin-bottom: 2rem; }
+    .cta-banner .btn { background: #0e1a2f; color: #fff; box-shadow: 0 12px 28px -10px rgba(0,0,0,.45); }
+    .cta-banner .btn:hover { transform: translateY(-2px); background: #16273f; }
+
+    /* ── Contact ── */
+    .contact { background: var(--paper-2); }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2rem, 4vw, 3.5rem); max-width: 1040px; margin: 0 auto; align-items: start; }
+    .contact-info h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: .9rem; }
+    .contact-info > p { color: var(--ink-soft); margin-bottom: 1.6rem; line-height: 1.7; }
+    .contact-item { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.1rem; font-size: .98rem; color: var(--ink); }
+    .contact-item .icon { width: 44px; height: 44px; background: #fff; border: 1px solid var(--line); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); flex-shrink: 0; }
+    .contact-item .icon svg { width: 20px; height: 20px; color: var(--amber-ink); }
+    .contact-item a { color: var(--amber-ink); text-decoration: none; font-weight: 600; }
+    .contact-item a:hover { text-decoration: underline; }
+    .contact-form { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.6rem, 4vw, 2.4rem); box-shadow: var(--shadow); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.15rem; }
+    .form-group label { display: block; font-size: .85rem; font-weight: 600; color: var(--ink); margin-bottom: .45rem; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: .8rem 1rem; border: 1.5px solid var(--line); border-radius: 11px; font-size: .95rem; font-family: inherit; transition: border-color .2s, box-shadow .2s, background .2s; background: var(--paper-2); color: var(--ink);
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--amber); background: #fff; box-shadow: 0 0 0 4px rgba(234,122,46,.12); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit { width: 100%; padding: 1rem; background: var(--amber); color: #fff; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background .2s, transform .18s, box-shadow .25s; font-family: inherit; }
+    .form-submit:hover { background: var(--amber-2); transform: translateY(-2px); box-shadow: 0 12px 26px -10px rgba(234,122,46,.6); }
+    .form-note { font-size: .82rem; color: var(--muted); text-align: center; margin-top: .9rem; }
+
+    /* ── Footer ── */
+    .footer { background: var(--navy); color: rgba(255,255,255,.55); padding: 3.2rem clamp(1.25rem, 5vw, 3rem) 2.4rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.12); margin-bottom: 1.8rem; }
+    .footer-brand .nav-logo { margin-bottom: .9rem; }
+    .footer-brand p { color: rgba(255,255,255,.55); font-size: .9rem; max-width: 30ch; line-height: 1.6; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; }
+    .footer-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: .9rem; transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; align-items: center; color: rgba(255,255,255,.5); font-size: .84rem; }
+    .footer-bottom a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .footer-bottom a:hover { color: #fff; }
+
+    /* ── Reveal ── */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 980px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-media { max-width: 520px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card.feature { grid-column: span 2; grid-row: auto; }
+      .service-card.std { grid-column: span 1; }
+      .why-list { grid-template-columns: 1fr; gap: 0 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 70px; left: 0; right: 0; background: var(--navy); padding: 1.2rem clamp(1.25rem, 5vw, 3rem) 1.6rem; gap: .5rem; box-shadow: 0 20px 40px -14px rgba(0,0,0,.5); }
+      .nav-links.open a { padding: .7rem .8rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+      .gallery-item.wide { grid-column: span 2; }
+      .trust-inner { gap: 1rem 1.6rem; }
+      .footer-top, .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Chinners Heating and Air — HVAC, Heating & Cooling, Geothermal",
+    "about": "Chinners Heating and Air LLC, a mobile HVAC service serving the Lowcountry (Summerville, SC) since 2021.",
+    "imageCredit": [
+      {
+        "file": "images/hero-heatpump.jpg",
+        "usage": "gallery",
+        "caption": "Split heat pump outdoor unit",
+        "source": "https://commons.wikimedia.org/wiki/File:Carrier_Outdoor_Split_Air_Conditioner_Heat_Pump_System_(55005181522).jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Carrier_Outdoor_Split_Air_Conditioner_Heat_Pump_System_%2855005181522%29.jpg/1920px-Carrier_Outdoor_Split_Air_Conditioner_Heat_Pump_System_%2855005181522%29.jpg",
+        "creator": { "@type": "Person", "name": "Tony Webster" },
+        "license": { "@type": "CreativeWork", "name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" }
+      },
+      {
+        "file": "images/heatpump-2.jpg",
+        "usage": "gallery",
+        "caption": "Heat pump outdoor condenser",
+        "source": "https://commons.wikimedia.org/wiki/File:Heat_Pump.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Heat_Pump.jpg/1920px-Heat_Pump.jpg",
+        "creator": { "@type": "Person", "name": "Kristoferb" },
+        "license": { "@type": "CreativeWork", "name": "CC BY-SA 3.0", "url": "https://creativecommons.org/licenses/by-sa/3.0/" }
+      },
+      {
+        "file": "images/ducts.jpg",
+        "usage": "gallery",
+        "caption": "Metal HVAC air ductwork",
+        "source": "https://commons.wikimedia.org/wiki/File:Air_duct_pipes_at_Viborg_Katedralskole.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Air_duct_pipes_at_Viborg_Katedralskole.jpg/1920px-Air_duct_pipes_at_Viborg_Katedralskole.jpg",
+        "creator": { "@type": "Person", "name": "W.carter" },
+        "license": { "@type": "CreativeWork", "name": "Public domain" }
+      },
+      {
+        "file": "images/thermostat-ecobee.jpg",
+        "usage": "gallery",
+        "caption": "Smart thermostat on a wall",
+        "source": "https://commons.wikimedia.org/wiki/File:Ecobee4.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ecobee4.jpg/1920px-Ecobee4.jpg",
+        "creator": { "@type": "Person", "name": "Daylen" },
+        "license": { "@type": "CreativeWork", "name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" }
+      },
+      {
+        "file": "images/thermostat-honeywell.jpg",
+        "usage": "gallery",
+        "caption": "Digital thermostat dial",
+        "source": "https://commons.wikimedia.org/wiki/File:Honeywell_E528_Smart_Digital_Thermostat.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Honeywell_E528_Smart_Digital_Thermostat.jpg/1920px-Honeywell_E528_Smart_Digital_Thermostat.jpg",
+        "creator": { "@type": "Person", "name": "TaurusEmerald" },
+        "license": { "@type": "CreativeWork", "name": "CC BY-SA 4.0", "url": "https://creativecommons.org/licenses/by-sa/4.0/" }
+      },
+      {
+        "file": "images/jeff-work.jpg",
+        "usage": "about + services",
+        "caption": "Jeffrey Chinners servicing an outdoor AC unit",
+        "source": "Provided by Chinners Heating and Air LLC (client-supplied photograph of Jeffrey Chinners).",
+        "creator": { "@type": "Person", "name": "Jeffrey Chinners" },
+        "license": { "@type": "CreativeWork", "name": "All rights reserved — client property" }
+      },
+      {
+        "file": "images/logo.png",
+        "usage": "navigation / brand mark",
+        "caption": "Chinners Heating and Air logo",
+        "source": "Provided by Chinners Heating and Air LLC (client-supplied logo, extracted from logo.jpg).",
+        "creator": { "@type": "Organization", "name": "Chinners Heating and Air LLC" },
+        "license": { "@type": "CreativeWork", "name": "All rights reserved — client property" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <img src="images/logo.png" alt="Chinners Heating and Air" width="40" height="40"
+             data-credit-source="Provided by Chinners Heating and Air LLC (client-supplied logo, extracted from logo.jpg)"
+             data-credit-author="Chinners Heating and Air LLC"
+             data-credit-license="All rights reserved — client property">
+        <span>Chinners Heating &amp; Air</span>
+      </a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Our Work</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge"><span class="dot"></span> Serving the Lowcountry since 2021</div>
+        <h1>Quality service at <em>affordable rates.</em></h1>
+        <p>Professional, timely, and honest HVAC for your home. Geothermal expertise, EPA Universal certification, and a team that treats your comfort like their own.</p>
+        <div class="hero-actions">
+          <a href="tel:+184****3731" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (843) 934-3731
+          </a>
+          <a href="#contact" class="btn btn-ghost-dark">Request a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust ribbon -->
+  <div class="trust">
+    <div class="trust-inner">
+      <span class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5-2 8-6 8-11V5l-8-3-8 3v6c0 5 3 9 8 11z"/></svg>
+        <b>EPA Universal</b>&nbsp;certified
+      </span>
+      <span class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Family-owned &amp; local
+      </span>
+      <span class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Free second-quote calls
+      </span>
+      <span class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        On-time, every time
+      </span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="section-head center reveal">
+      <span class="eyebrow">About Us</span>
+      <h2>A family-owned team you can trust</h2>
+      <p>We're not a franchise or a call center. When you call Chinners Heating and Air, you talk to the people who actually show up at your door.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <h3>Honesty first. Always.</h3>
+        <p>Founded in 2021 in Summerville, South Carolina, Chinners Heating and Air was built on a simple promise: give our neighbors the same honest, no-pressure service we'd want for our own families.</p>
+        <p>We specialize in residential HVAC systems with deep expertise in geothermal heat pumps. Whether it's a quick repair, a full system replacement, or a brand-new install, we show up on time, explain everything in plain language, and leave your home cleaner than we found it.</p>
+        <ul class="about-features">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> EPA Universal certified technician</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Geothermal heat pump installation &amp; repair</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Free second-quote service calls</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Full home HVAC: duct work, units, thermostats</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Serving Summerville &amp; the Charleston metro area</li>
+        </ul>
+        <div class="about-card">
+          <div class="mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div>
+            <h4>The Chinners Way</h4>
+            <p>No upselling. No runaround. No "we'll call you back" that never comes. Just straight answers, fair pricing, and work that lasts. If we don't think you need a replacement, we'll tell you — and show you why.</p>
+          </div>
+        </div>
+      </div>
+      <figure class="about-media reveal">
+        <img src="images/jeff-work.jpg" alt="Jeffrey servicing an outdoor AC condenser unit for a local home" loading="lazy"
+             data-credit-source="Provided by Chinners Heating and Air LLC (client-supplied photograph of Jeffrey Chinners)"
+             data-credit-author="Jeffrey Chinners"
+             data-credit-license="All rights reserved — client property">
+        <figcaption>Jeffrey on the job — clean installs, careful diagnostics, and honest answers.</figcaption>
+        <div class="badge-2021"><b>2021</b><span>Founded in Summerville, SC</span></div>
+      </figure>
+    </div>
+    <div class="team-row reveal">
+      <div class="team-card">
+        <div class="team-avatar">JC</div>
+        <div><div class="name">Jeffrey Chinners</div><div class="role">Owner &amp; Lead Technician</div></div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">MC</div>
+        <div><div class="name">Meredith Chinners</div><div class="role">Customer Relations</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Full-service HVAC for your home</h2>
+      <p>From emergency repairs to complete system installs, we handle every part of your comfort system.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card feature reveal">
+        <span class="tag">Our Specialty</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M12 6l-3-2M12 6l3-2M12 18l-3 2M12 18l3 2"/><path d="M4.5 7.5l15 9M4.5 7.5l3.2.9M4.5 7.5l.9 3.2M19.5 16.5l-3.2-.9M19.5 16.5l-.9-3.2"/></svg>
+        </div>
+        <h3>Geothermal Heat Pumps</h3>
+        <p>Our specialty. Energy-efficient geothermal installation and repair for homeowners who want the lowest operating costs and the longest-lasting system on the market — the smartest long-term choice for a Lowcountry home.</p>
+      </div>
+      <div class="service-card std reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>AC &amp; Heating Repair</h3>
+        <p>Fast, honest diagnostics for all major brands. We find the real problem — not just the symptom — and give you a fair quote before any work begins.</p>
+      </div>
+      <div class="service-card std reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-4 4"/><path d="M21 7H9a5 5 0 0 0-5 5"/><path d="M7 21l-4-4 4-4"/><path d="M3 17h12a5 5 0 0 0 5-5"/></svg></div>
+        <h3>System Replacement</h3>
+        <p>Full AC and heating unit replacements, matched to your home's needs and budget. We handle old-system removal and the new install, start to finish.</p>
+      </div>
+      <div class="service-card std reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4 4 0 1 0 5 0z"/></svg></div>
+        <h3>Thermostats</h3>
+        <p>Smart thermostat installation and configuration. Get precise temperature control and real energy savings from a system you can run from your phone.</p>
+      </div>
+      <div class="service-card std reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></div>
+        <h3>Maintenance &amp; Tune-Ups</h3>
+        <p>Regular maintenance keeps your system at peak efficiency and catches small problems before they become expensive ones. Seasonal checkups included.</p>
+      </div>
+      <div class="service-card std reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="13" rx="2"/><path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><circle cx="12" cy="14.5" r="3.2"/><path d="M12 12v.5"/></svg></div>
+        <h3>Duct Work</h3>
+        <p>Leaky ducts waste energy and money. We inspect, repair, and install ductwork so conditioned air actually reaches every room in your home.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section why" id="why">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>What makes Chinners different</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item reveal">
+        <div class="n">01</div>
+        <div><h3>Family owned</h3><p>We live in the community we serve. Your neighbor's recommendation is the best ad we'll ever get.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="n">02</div>
+        <div><h3>Fair pricing</h3><p>Quotes in the hundreds, not the thousands. Free second-quote service calls. No surprises.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="n">03</div>
+        <div><h3>Real people</h3><p>Call and you reach Jeffrey or Meredith — not a menu system. Questions answered on the spot.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="n">04</div>
+        <div><h3>Spotless cleanup</h3><p>We vacuum up the carpet, sweep the shop, and leave your home cleaner than we found it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery" id="gallery">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2>Systems we service every day</h2>
+      <p>From outdoor units to the thermostat on your wall — here's what we handle.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item jeff reveal" tabindex="0">
+        <img src="images/jeff-work.jpg" alt="Jeffrey servicing an outdoor AC unit for a local homeowner" loading="lazy"
+             data-credit-source="Provided by Chinners Heating and Air LLC (client-supplied photograph of Jeffrey Chinners)"
+             data-credit-author="Jeffrey Chinners"
+             data-credit-license="All rights reserved — client property">
+        <div class="cap">Jeffrey on a service call</div>
+      </div>
+      <div class="gallery-item tall reveal" tabindex="0">
+        <img src="images/hero-heatpump.jpg" alt="Split heat pump outdoor unit" loading="lazy"
+             data-credit-source="https://commons.wikimedia.org/wiki/File:Carrier_Outdoor_Split_Air_Conditioner_Heat_Pump_System_(55005181522).jpg"
+             data-credit-download="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Carrier_Outdoor_Split_Air_Conditioner_Heat_Pump_System_%2855005181522%29.jpg/1920px-Carrier_Outdoor_Split_Air_Conditioner_Heat_Pump_System_%2855005181522%29.jpg"
+             data-credit-author="Tony Webster"
+             data-credit-license="CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/">
+        <div class="cap">Split heat pump systems</div>
+      </div>
+      <div class="gallery-item reveal" tabindex="0">
+        <img src="images/thermostat-ecobee.jpg" alt="Smart thermostat on a wall" loading="lazy"
+             data-credit-source="https://commons.wikimedia.org/wiki/File:Ecobee4.jpg"
+             data-credit-download="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ecobee4.jpg/1920px-Ecobee4.jpg"
+             data-credit-author="Daylen"
+             data-credit-license="CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/">
+        <div class="cap">Smart thermostat setup</div>
+      </div>
+      <div class="gallery-item reveal" tabindex="0">
+        <img src="images/thermostat-honeywell.jpg" alt="Digital thermostat dial" loading="lazy"
+             data-credit-source="https://commons.wikimedia.org/wiki/File:Honeywell_E528_Smart_Digital_Thermostat.jpg"
+             data-credit-download="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Honeywell_E528_Smart_Digital_Thermostat.jpg/1920px-Honeywell_E528_Smart_Digital_Thermostat.jpg"
+             data-credit-author="TaurusEmerald"
+             data-credit-license="CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/">
+        <div class="cap">Precise temperature control</div>
+      </div>
+      <div class="gallery-item reveal" tabindex="0">
+        <img src="images/ducts.jpg" alt="Metal HVAC air ductwork" loading="lazy"
+             data-credit-source="https://commons.wikimedia.org/wiki/File:Air_duct_pipes_at_Viborg_Katedralskole.jpg"
+             data-credit-download="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Air_duct_pipes_at_Viborg_Katedralskole.jpg/1920px-Air_duct_pipes_at_Viborg_Katedralskole.jpg"
+             data-credit-author="W.carter"
+             data-credit-license="Public domain">
+        <div class="cap">Ductwork &amp; airflow</div>
+      </div>
+      <div class="gallery-item wide reveal" tabindex="0">
+        <img src="images/heatpump-2.jpg" alt="Heat pump outdoor condenser" loading="lazy"
+             data-credit-source="https://commons.wikimedia.org/wiki/File:Heat_Pump.jpg"
+             data-credit-download="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Heat_Pump.jpg/1920px-Heat_Pump.jpg"
+             data-credit-author="Kristoferb"
+             data-credit-license="CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/">
+        <div class="cap">Heat pump installs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials" id="reviews">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Reviews</span>
+      <h2>What our neighbors say</h2>
+      <div class="rating-strip">
+        <span class="stars">★★★★★</span>
+        <span>96% recommend us · 39 five-star reviews</span>
+      </div>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="testimonial-text">"The best! They earned my business, and in the future I will call them first. They were my 3rd quote because I kept getting conflicting answers and quotes in the thousands. He came out and diagnosed the issue and the confidence he had was very reassuring. He started calling Carrier for a part while at my home, on a free second quote service call. He did more than the other three combined and his quote was fair, in the hundreds. Definitely recommend."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SM</div>
+          <div><div class="testimonial-name">Sara Marshall</div><div class="testimonial-date">August 2026</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="testimonial-text">"When my AC went out I called a contractor who stated I needed a full coil replacement. Then my warranty company sent a different contractor who said I needed a valve replaced. I didn't know what to do or who to trust. My friend told me about Jeff at Chinners and so I called. Meredith talked me off a ledge, gave me sound advice, and had me sorted out fast."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div><div class="testimonial-name">Megan Rodriguez</div><div class="testimonial-date">August 2026</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="testimonial-text">"Me and my boyfriend just got a house and needed a whole new everything! Duct work, unit, thermostat — everything — and they came in and had everything done in 3 days at a great price! They didn't leave a bit of mess, even vacuumed up the carpet!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">KP</div>
+          <div><div class="testimonial-name">Kaylan Phillips</div><div class="testimonial-date">July 2026</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="testimonial-text">"Highly recommend! Meredith was as sweet as could be, and the techs were great! They came out as soon as they could and had the AC working in no time! Thanks y'all!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">KO</div>
+          <div><div class="testimonial-name">Kelly Overbay-Lloyd</div><div class="testimonial-date">July 2026</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <h2>AC out? System making noise? Just need a second opinion?</h2>
+    <p>Call now — we'll get you an honest answer and a fair price, fast.</p>
+    <a href="tel:+184****3731" class="btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (843) 934-3731
+    </a>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Request a free quote</h2>
+      <p>Tell us what's going on and we'll get back to you with a straight answer and a fair price.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Contact information</h3>
+        <p>We're a mobile service covering Summerville and the greater Charleston, SC metro area. No storefront — just us, our truck, and your home.</p>
+        <div class="contact-item">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><a href="tel:+184****3731">(843) 934-3731</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+          <div><a href="mailto:chinnershvac@gmail.com">chinnershvac@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>Summerville, SC &amp; the Lowcountry</div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+          <div><a href="https://www.facebook.com/p/Chinners-Heating-and-Air-100064566084961/" target="_blank" rel="noopener">Facebook Page</a></div>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" action="mailto:chinnershvac@gmail.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(843) 555-0123" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">What do you need?</label>
+          <select id="service" name="service">
+            <option value="">Select a service…</option>
+            <option>AC / Heating Repair</option>
+            <option>System Replacement</option>
+            <option>Geothermal Heat Pump</option>
+            <option>Duct Work</option>
+            <option>Thermostat</option>
+            <option>Maintenance / Tune-Up</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us what's happening</label>
+          <textarea id="message" name="message" placeholder="e.g. Our AC isn't cooling anymore, we're hearing a loud noise…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+        <p class="form-note">We typically respond within a few hours during business hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="9" fill="#ea7a2e"/><path d="M16 6c-3.4 0-6.5 2.8-6.5 6.6 0 4.4 3.3 7.2 6.5 10 3.2-2.8 6.5-5.6 6.5-10 0-3.8-3.1-6.6-6.5-6.6z" fill="#fff" opacity="0.92"/><circle cx="16" cy="12" r="2.6" fill="#ea7a2e"/></svg>
+            Chinners Heating &amp; Air
+          </a>
+          <p>Quality HVAC service at affordable rates. Family-owned and serving the Lowcountry since 2021.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Work</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Chinners Heating and Air LLC &middot; Summerville, SC</span>
+        <span><a href="tel:+184****3731">(843) 934-3731</a> &middot; <a href="mailto:chinnershvac@gmail.com">chinnershvac@gmail.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll state
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+
+    // Scroll-reveal
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reveals = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      reveals.forEach(el => el.classList.add('in'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => io.observe(el));
+    }
+
+    // Form submit — opens email client with prefilled body
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+      const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nService: ${service}\n\nMessage:\n${message}`);
+      window.location.href = `mailto:chinnershvac@gmail.com?subject=${encodeURIComponent('Quote Request — ' + (service || 'HVAC Service'))}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
